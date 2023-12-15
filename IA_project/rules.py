@@ -83,6 +83,24 @@ class RecommendationEngine(KnowledgeEngine):
     @Rule(WeatherPreference(weather="sunny"), NaturePreference(nature="beaches"), FoodPreference(food="Arab food"),AccomodationPreference(accommodation="Resorts"), BudgetPreference(price="expensive"),CulturePreference(culture="History"))
     def recommend_sunny_beach_arab_history(self):
         self.recommendations.append("Dubai")
+    @Rule(WeatherPreference(weather="sunny"), NaturePreference(nature="beaches"))
+    def recommend_sunny_beach(self):
+        self.recommendations.append("USA")
+    @Rule(WeatherPreference(weather="rainy"), NaturePreference(nature="forest"))
+    def recommend_rainy_forest(self):
+        self.recommendations.append("Brazil")
+    @Rule(WeatherPreference(weather="cold"), NaturePreference(nature="mountains"))
+    def recommend_cold_mountains(self):
+        self.recommendations.append("Canada")
+    @Rule(WeatherPreference(weather="sunny"), NaturePreference(nature="island"))
+    def recommend_sunny_island(self):
+        self.recommendations.append("Greece")
+    @Rule(WeatherPreference(weather="sunny"), NaturePreference(nature="island"))
+    def recommend_sunny_island_djerba(self):
+        self.recommendations.append("Djerba")
+    @Rule(WeatherPreference(weather="snowy"), NaturePreference(nature="mountains"))
+    def recommend_snowy_mountains(self):
+        self.recommendations.append("USA")
 
 
 
