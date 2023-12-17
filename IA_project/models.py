@@ -6,7 +6,7 @@ class UserPreferences:
         self.budget = budget
         self.food=food
         self.culture=culture
-        self.accomodation=accomodation
+        self.accommodation=accomodation
 
 class Suggession:
     def __init__(self,pays,gouvernorat):

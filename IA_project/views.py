@@ -14,13 +14,13 @@ def recommend_destination(request):
         budget="moderate"
     else:
         budget="expensive"
-    user_preferences = UserPreferences(data.get("weather"),data.get("nature"),budget,data.get("food"),data.get("culture"),data.get("accomodation"))
+    user_preferences = UserPreferences(data.get("weather"),data.get("nature"),budget,data.get("food"),data.get("culture"),data.get("accommodation"))
     engine = RecommendationEngine()
     engine.reset()
     engine.declare(WeatherPreference(weather=user_preferences.weather))
     engine.declare(NaturePreference(nature=user_preferences.nature))
     engine.declare(FoodPreference(food=user_preferences.food))
-    engine.declare(AccomodationPreference(accomodation=user_preferences.accomodation))
+    engine.declare(AccomodationPreference(accomodation=user_preferences.accommodation))
     engine.declare(BudgetPreference(budget=user_preferences.budget))
     engine.declare(CulturePreference(culture=user_preferences.culture))
     engine.run()
