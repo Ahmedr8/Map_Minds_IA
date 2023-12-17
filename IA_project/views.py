@@ -5,7 +5,7 @@ from .rules import RecommendationEngine, WeatherPreference, NaturePreference, Fo
 from rest_framework import status
 from django.views.decorators.csrf import csrf_exempt
 import json
-
+@csrf_exempt
 def recommend_destination(request):
     data = json.loads(request.body)
     if(data.get("budget")<=2000):
