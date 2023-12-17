@@ -30,6 +30,10 @@ ALLOWED_HOSTS = ['mapminds.onrender.com',"127.0.0.1","mapminds.netlify.app]","lo
 
 # Application definition
 CORS_ALLOWED_ORIGINS = [
+    'http://localhost:3000',
+    "https://mapminds.netlify.app/",
+    'http://',
+    'https://',
     '*',
 ]
 
