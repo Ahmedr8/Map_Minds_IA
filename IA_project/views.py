@@ -25,5 +25,6 @@ def recommend_destination(request):
     engine.declare(CulturePreference(culture=user_preferences.culture))
     engine.run()
     recommendations = engine.get_recommendations()
-    return JsonResponse({'result': recommendations}, status=status.HTTP_200_OK)
+    recommendations_serializer = json.dumps([suggestion.serialize() for suggestion in recommendations])
+    return JsonResponse(json.loads(recommendations_serializer), safe=False,status=status.HTTP_200_OK)
 

@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-__n)+j59ig9v3yvmj+j1jssx8uh5q07nax_%st13kcvggbb7=m
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['mapminds.onrender.com']
+ALLOWED_HOSTS = ['mapminds.onrender.com',"127.0.0.1"]
 
 
 # Application definition
