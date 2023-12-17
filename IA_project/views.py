@@ -20,7 +20,7 @@ def recommend_destination(request):
     engine.declare(WeatherPreference(weather=user_preferences.weather))
     engine.declare(NaturePreference(nature=user_preferences.nature))
     engine.declare(FoodPreference(food=user_preferences.food))
-    engine.declare(AccomodationPreference(accomodation=user_preferences.accommodation))
+    engine.declare(AccomodationPreference(accommodation=user_preferences.accommodation))
     engine.declare(BudgetPreference(budget=user_preferences.budget))
     engine.declare(CulturePreference(culture=user_preferences.culture))
     engine.run()

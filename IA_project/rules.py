@@ -28,15 +28,16 @@ class RecommendationEngine(KnowledgeEngine):
     def recommend_cheap_nature(self):
         res=Suggession("Tunisia","")
         self.recommendations.append(res)
-    @Rule(WeatherPreference(weather="Sunny"), NaturePreference(nature="desert"))
+    @Rule(WeatherPreference(weather="Sunny"), AccomodationPreference(accommodation="Desert"))
     def recommend_sunny_desert(self):
         res = Suggession("Tunisia", "Touzer")
         self.recommendations.append(res)
-    @Rule(WeatherPreference(weather="Sunny"), NaturePreference(nature="Beaches"),BudgetPreference(budget="cheap"),CulturePreference(culture="Urbanized"),AccomodationPreference(accommodation="Hotels"),FoodPreference(food="spicy"))
+    @Rule(WeatherPreference(weather="Sunny"), NaturePreference(nature="Beaches"),BudgetPreference(budget="cheap"),CulturePreference(culture="Urbanized"),AccomodationPreference(accommodation="Hotels"),FoodPreference(food="Spicy"))
     def recommend_sunny_Hmmamet(self):
         res = Suggession("Tunisia", "Hmmamet")
+
         self.recommendations.append(res)
-    @Rule(WeatherPreference(weather="Sunny"), NaturePreference(nature="Beaches"), FoodPreference(food="spicy"),AccomodationPreference(accommodation="Hotels"), BudgetPreference(budget="moderate"), CulturePreference(culture="Urbanized"))
+    @Rule(WeatherPreference(weather="Sunny"), NaturePreference(nature="Beaches"), FoodPreference(food="Spicy"),AccomodationPreference(accommodation="Hotels"), BudgetPreference(budget="moderate"), CulturePreference(culture="Urbanized"))
     def recommend_beach_destination(self):
         res = Suggession("Bali", "")
         self.recommendations.append(res)
