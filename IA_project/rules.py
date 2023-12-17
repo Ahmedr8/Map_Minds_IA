@@ -33,7 +33,7 @@ class RecommendationEngine(KnowledgeEngine):
         res = Suggession("Tunisia", "Touzer")
         self.recommendations.append(res)
     @Rule(WeatherPreference(weather="Sunny"), NaturePreference(nature="Beaches"),BudgetPreference(budget="cheap"),CulturePreference(culture="Urbanized"),AccomodationPreference(accomodation="Hotels"),FoodPreference(food="spicy"))
-    def recommend_sunny_desert(self):
+    def recommend_sunny_Hmmamet(self):
         res = Suggession("Tunisia", "Hmmamet")
         self.recommendations.append(res)
     @Rule(WeatherPreference(weather="Sunny"), NaturePreference(nature="Beaches"), FoodPreference(food="spicy"),AccomodationPreference(accommodation="Hotels"), BudgetPreference(price="moderate"), CulturePreference(culture="Urbanized"))
