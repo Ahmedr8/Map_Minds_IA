@@ -110,7 +110,7 @@ class RecommendationEngine(KnowledgeEngine):
         self.recommendations.append(res)
     @Rule(WeatherPreference(weather="Rainy"), NaturePreference(nature="Tropical"))
     def recommend_rainy_forest(self):
-        res = Suggession("Brail", "")
+        res = Suggession("Brazil", "")
         self.recommendations.append(res)
     @Rule(WeatherPreference(weather="Cold"), NaturePreference(nature="Mountains"))
     def recommend_cold_mountains(self):
