@@ -69,7 +69,7 @@ class RecommendationEngine(KnowledgeEngine):
         res = Suggession("Turkey", "Istanbul")
         self.recommendations.append(res)
     @Rule(WeatherPreference(weather="Sunny"), NaturePreference(nature="Beaches"), FoodPreference(food="Arab Food"),AccomodationPreference(accommodation="Hotels"), BudgetPreference(price="moderate"),CulturePreference(culture="History"))
-    def recommend_rainy_beach_history(self):
+    def recommend_rainy_beach_history_egypt(self):
         res = Suggession("Egypt", "")
         self.recommendations.append(res)
     @Rule(WeatherPreference(weather="Sunny"), NaturePreference(nature="Beaches"), FoodPreference(food="Sea Food"),AccomodationPreference(accommodation="Resorts"), BudgetPreference(price="expensive"),CulturePreference(culture="Urbanized"))
